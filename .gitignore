@@ -1,0 +1,21 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ---- 环境变量（启用 LLM 解释层时密钥写在这里，切勿提交）----
+.env
+.env.*
+
+# ---- 其他 ----
+*.tmp
+*.bak

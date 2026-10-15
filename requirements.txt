@@ -1,0 +1,14 @@
+# 运行环境（Windows / Linux / macOS 通用，Python >= 3.10）
+# 安装：python -m venv .venv && .venv/bin/pip install -r requirements.txt
+numpy>=1.26
+pandas>=2.0
+scikit-learn>=1.3
+scipy>=1.10
+requests>=2.31
+pillow>=10.0
+
+# 可选：微气候残差学习（LSTM / TFT），不装则自动跳过该模块
+# torch>=2.1
+
+# 可选：本地交互式 Demo（等价于 app/dashboard.html，但支持参数调节）
+# streamlit>=1.30
