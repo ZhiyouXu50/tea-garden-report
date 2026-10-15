@@ -1,4 +1,4 @@
-"""梅家坞微气候风险预警与行动决策助手 —— 源码包。"""
+"""一垄一候 · 梅家坞茶园地块级微气候风险预警与行动决策助手 —— 源码包。"""
 __all__ = [
     "fetch_weather", "fetch_dem", "terrain", "solar", "microclimate",
     "stress", "plots", "risk_model", "advice", "backtest", "render",

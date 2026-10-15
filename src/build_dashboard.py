@@ -60,7 +60,7 @@ _TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>梅家坞微气候风险预警与行动决策助手</title>
+<title>一垄一候 · 梅家坞茶园微气候风险预警</title>
 <style>
 :root{
   --bg:#0f1216; --panel:#171b21; --panel2:#1e232b; --line:#2a313b;
@@ -166,7 +166,7 @@ footer{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-si
 <div class="wrap">
 <header class="top">
   <div>
-    <h1>梅家坞微气候风险预警与行动决策助手
+    <h1>一垄一候 · 梅家坞茶园微气候风险预警
       <small id="subtitle"></small>
     </h1>
   </div>
@@ -528,7 +528,7 @@ function renderML(){
 function renderBulletin(){
   const m=M();
   const bs=m.layer_stats.blindspot||{};
-  const lines=[`【梅家坞茶园气候风险周报】${m.window}`,'',`· 本期结论：${m.summary.text}`];
+  const lines=[`【一垄一候 · 梅家坞茶园气候风险周报】${m.window}`,'',`· 本期结论：${m.summary.text}`];
   if(m.summary.n_high){
     lines.push('· 高风险地块：'+m.advices.filter(a=>a.risk_class===2).map(a=>`${a.unit_id}(${a.dominant})`).join('、'));
   }
@@ -649,7 +649,7 @@ def write_report(pack: dict, path) -> None:
     """生成 Markdown 分析报告（可直接作为参赛文档的技术附件）。"""
     L = []
     A = L.append
-    A(f"# 梅家坞微气候风险预警与行动决策助手 · 运行报告\n")
+    A(f"# 一垄一候 · 梅家坞茶园微气候风险运行报告\n")
     A(f"生成时间：{pack['generated_at']}　|　站点：{pack['site']['name']}"
       f"（{pack['site']['village']}）\n")
     g = pack["grid"]

@@ -16,14 +16,14 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "outputs" / "dashboard_data.json"
 
-st.set_page_config(page_title="梅家坞微气候风险预警助手", layout="wide")
+st.set_page_config(page_title="一垄一候 · 茶园微气候风险预警", layout="wide")
 
 if not DATA.exists():
     st.error("未找到 outputs/dashboard_data.json，请先运行 `python run_pipeline.py`。")
     st.stop()
 
 pack = json.loads(DATA.read_text(encoding="utf-8"))
-st.title("梅家坞微气候风险预警与行动决策助手")
+st.title("一垄一候 · 梅家坞茶园地块级微气候风险预警与行动决策助手")
 st.caption(f"{pack['site']['village']}｜网格 {pack['grid']['res_m']} m"
            f"｜生成于 {pack['generated_at']}")
 
